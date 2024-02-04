@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createClient } from "@/utils/supabase/middleware";
+import { redirect } from "next/dist/server/api-utils";
 
 export async function middleware(request: NextRequest) {
   try {
@@ -9,9 +10,14 @@ export async function middleware(request: NextRequest) {
 
     // Refresh session if expired - required for Server Components
     // https://supabase.com/docs/guides/auth/auth-helpers/nextjs#managing-session-with-middleware
-    await supabase.auth.getSession();
-
-    return response;
+    const userInfo=await supabase.auth.getSession();
+    console.log(userInfo?.data?.session)
+    if (userInfo?.data?.session){ 
+      console.log("success")
+      return response;
+    }else{
+      return NextResponse.redirect(new URL('/login',request.url))
+    }
   } catch (e) {
     // If you are here, a Supabase client could not be created!
     // This is likely because you have not set up environment variables.
@@ -33,6 +39,6 @@ export const config = {
      * - favicon.ico (favicon file)
      * Feel free to modify this pattern to include more paths.
      */
-    "/((?!_next/static|_next/image|favicon.ico).*)",
+    "/",
   ],
 };
