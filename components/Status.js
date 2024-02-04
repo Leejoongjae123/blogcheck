@@ -11,7 +11,7 @@ function Status() {
         data-tabs-toggle="#fullWidthTabContent"
         role="tablist"
       >
-        <li className="w-full">
+        <li className="w-full text-2xl">
           <button
             id="stats-tab"
             data-tabs-target="#stats"

@@ -83,7 +83,7 @@ export default function Read() {
             className="my-3 rounded-md no-underline hover:bg-btn-background-hover flex items-center text-sm"
           >
             
-            <Button type="primary" style={{backgroundColor:"skyblue"}}>뒤로가기</Button>
+            <Button type="primary" style={{backgroundColor:"slategray"}}>뒤로가기</Button>
           </Link>
           <Descriptions
             title="블로그 정보"
