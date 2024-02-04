@@ -34,6 +34,7 @@ export default async function Index() {
         </div>
       </nav>
 
+
       <div className="animate-in flex-1 flex flex-col gap-y-5 opacity-0 px-3 w-1/2">
         <Header />
         <main className="w-full">
