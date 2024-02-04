@@ -7,11 +7,8 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Next.js and Supabase Starter Kit",
-  description: "The fastest way to build apps with Next.js and Supabase",
+  title: "블로그진단",
 };
-
-import {NextUIProvider} from "@nextui-org/react";
 
 export default function RootLayout({
   children,
@@ -20,8 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={GeistSans.className}>
-      
-      <body className="bg-background text-foreground">
+      <body className=" text-black">
         <main className="min-h-screen flex flex-col items-center">
           {children}
         </main>

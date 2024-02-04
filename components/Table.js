@@ -6,8 +6,9 @@ import {
   UploadOutlined,
   DownloadOutlined,
   PlusOutlined,
-  MinusOutlined
+  MinusOutlined,
 } from "@ant-design/icons";
+import Link from "next/link";
 import { Button, Divider, Flex, Radio, Table, Tag } from "antd";
 
 const { Search } = Input;
@@ -20,6 +21,13 @@ const columns = [
   {
     title: "ID",
     dataIndex: "ID",
+    render: (tags) => (
+      <Link href={`/detail/${tags}`}>
+        <Tag color="gray" >
+          {tags}
+        </Tag>
+      </Link>
+    ),
   },
   {
     title: "이름",
@@ -53,7 +61,7 @@ const columns = [
         })}
       </span>
     ),
-  }
+  },
 ];
 const data = [];
 for (let i = 0; i < 46; i++) {
