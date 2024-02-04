@@ -25,10 +25,10 @@ export default async function Index() {
   const isSupabaseConnected = canInitSupabaseClient();
 
   return (
-    <div className="flex-1 w-full flex flex-col gap-20 items-center">
-      <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
+    <div className="flex-1 w-full flex flex-col gap-20 items-center ">
+      <nav className="w-full flex justify-center h-16 bg-gray-100">
         <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">
-          <Link href='/'><h1 className="font-bold text-2xl">블로그 진단</h1></Link>
+          <Link href='/'><h1 className="font-bold text-2xl ">블로그 진단</h1></Link>
           
           {isSupabaseConnected && <AuthButton />}
         </div>
@@ -42,7 +42,7 @@ export default async function Index() {
         </main>
       </div>
       
-      <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
+      <footer className="w-full border-t p-8 flex justify-center text-center text-xs">
         <p>
           copyright © 2024 | 공생마케팅 | All Right Reserved
           <a
