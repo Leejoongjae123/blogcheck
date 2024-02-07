@@ -76,7 +76,7 @@ export default function Read() {
 
   return (
     <>
-      <div className="w-1/2 h-full justify-center items-center ">
+      <div className="animate-in w-1/2 h-full justify-center items-center ">
         <div>
           <Link
             href="/"

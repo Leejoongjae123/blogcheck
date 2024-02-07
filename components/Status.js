@@ -35,7 +35,7 @@ function Status() {
           role="tabpanel"
           aria-labelledby="stats-tab"
         >
-          <dl className="flex justify-around items-center p-4 text-gray-900 ">
+          <dl className="flex justify-evenly items-center p-4 text-gray-900 ">
             <div className="flex flex-col items-center justify-center">
               <dt className="mb-2 text-3xl font-extrabold"><p>02.04</p><p>14:00</p></dt>
               <dd className="text-gray-500 dark:text-gray-400">
